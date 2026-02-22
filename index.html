@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Accessibility Comparison</title>
+</head>
+<body>
+
+<!-- ===== BAD UI ===== -->
+
+<section>
+    <h1>Bad UI</h1>
+
+    <div>
+        <div>Login Page</div>
+    </div>
+
+    <div>
+        <input type="text" placeholder="Email">
+    </div>
+
+    <div>
+        <input type="password" placeholder="Password">
+    </div>
+
+    <div onclick="alert('Logged in')">
+        Login
+    </div>
+
+    <div>
+        <img src="profile.jpg">
+    </div>
+</section>
+
+<hr>
+
+<!-- ===== GOOD UI ===== -->
+
+<section>
+    <h1> Good UI</h1>
+
+    <header>
+        <h2>Login Page</h2>
+    </header>
+
+    <main>
+        <form>
+
+            <div>
+                <label for="email">Email</label><br>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+            </div>
+
+            <br style="margin-bottom: 16px;"/>
+
+            <div>
+                <label for="password">Password</label><br>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                >
+            </div>
+
+            <br style="margin-bottom: 16px;"/>
+
+            <div>
+                <button type="submit">
+                    Login
+                </button>
+            </div>
+
+        </form>
+
+        <section>
+            <h3>Profile Image</h3>
+            <img 
+                src="profile.jpg" 
+                alt="Foto profil pengguna"
+            >
+        </section>
+    </main>
+</section>
+
+</body>
+</html>
